@@ -18,7 +18,13 @@ function App() {
         <div className='sticky top-0 flex h-screen items-center overflow-hidden'>
           <motion.div style={{ x }} className='flex items-center gap-10'>
             {images.map((img, index) => (
-              <img
+              <motion.img
+                initial={{ scale: 0.9, filter: "blur(10px)" }}
+                whileInView={{
+                  scale: 1,
+                  filter: "blur(0px)",
+                  transition: { duration: 0.5 },
+                }}
                 key={index}
                 src={img}
                 alt={index}

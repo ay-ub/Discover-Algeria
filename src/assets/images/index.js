@@ -1,4 +1,3 @@
-import img1 from "./adrar.jpg";
 import img2 from "./batna.jpg";
 import img3 from "./image1.jpg";
 import img4 from "./image2.jpg";
@@ -20,7 +19,7 @@ import img19 from "./pexels-umbra-bandits-1851611-16171448.jpg";
 
 export default [
   img16,
-  img1,
+
   img2,
   img3,
   img4,
