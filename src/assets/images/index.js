@@ -19,6 +19,7 @@ import img18 from "./pexels-ramzi-belaidi-527587592-19720676.jpg";
 import img19 from "./pexels-umbra-bandits-1851611-16171448.jpg";
 
 export default [
+  img16,
   img1,
   img2,
   img3,
@@ -34,7 +35,6 @@ export default [
   img13,
   img14,
   img15,
-  img16,
   img17,
   img18,
   img19,
