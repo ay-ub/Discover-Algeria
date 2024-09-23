@@ -2,13 +2,15 @@ import { useScroll, motion, useTransform } from "framer-motion";
 import { useRef } from "react";
 import { ReactLenis } from "lenis/react";
 import images from "./assets/images";
+import footer from "./assets/footer.svg";
+import bar from "./assets/progress-bar.svg";
 function App() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-600%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["10%", "-550%"]);
   return (
     <ReactLenis root>
       <section
@@ -35,6 +37,15 @@ function App() {
             ))}
           </motion.div>
         </div>
+        <motion.div
+          initial={{ opacity: 0, y: 100 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.5, duration: 1, ease: "easeInOut" }}
+          className='fixed bottom-0 w-full flex flex-col '
+        >
+          <img src={bar} alt='progress-bar' className='w-full' />
+          <img src={footer} alt='footer' className='w-full' />
+        </motion.div>
       </section>
     </ReactLenis>
   );
